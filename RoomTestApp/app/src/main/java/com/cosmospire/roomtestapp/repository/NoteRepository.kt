@@ -9,8 +9,8 @@ import org.jetbrains.anko.doAsync
 
 
 class NoteRepository(application: Application) {
-    lateinit var noteDao: NoteDao
-    lateinit var allNotes: LiveData< List<Note> >
+    var noteDao: NoteDao
+    var allNotes: LiveData< List<Note> >
 
     init {
         val database: NoteDatabase = NoteDatabase.getInstance(application)
