@@ -1,5 +1,6 @@
 package com.cosmospire.roomtestapp.room
 
+import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
 
 @Dao
@@ -18,5 +19,5 @@ interface NoteDao {
     fun deleteAllNotes()
 
     @Query("SELECT * FROM note_table ORDER BY priority DESC")
-    fun getAllNotes(): List<Note>
+    fun getAllNotes(): LiveData< List<Note> >
 }
