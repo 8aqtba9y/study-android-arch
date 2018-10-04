@@ -28,8 +28,10 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
         holder.textViewPriority.text = "${currentNote.priority}"
     }
 
-    fun addNotes(notes: List<Note>) {
-        this.notes = notes
+    fun addNotes(notes: List<Note>?) {
+        if (notes != null) {
+            this.notes = notes
+        }
         notifyDataSetChanged()
     }
 
