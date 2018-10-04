@@ -1,10 +1,10 @@
-package com.cosmospire.roomtestapp
+package com.cosmospire.roomtestapp.view
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.cosmospire.roomtestapp.room.Note
+import com.cosmospire.roomtestapp.R
 import com.cosmospire.roomtestapp.viewmodel.NoteViewModel
 
 class MainActivity : AppCompatActivity() {
