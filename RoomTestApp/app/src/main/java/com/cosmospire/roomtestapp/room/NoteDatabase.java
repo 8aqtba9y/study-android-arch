@@ -29,12 +29,14 @@ public abstract class NoteDatabase extends RoomDatabase {
     }
 
     private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
+        // called only once
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
             new PopulateDbAsyncTask(instance).execute();
         }
 
+        // called every times
         @Override
         public void onOpen(@NonNull SupportSQLiteDatabase db) {
             super.onOpen(db);
